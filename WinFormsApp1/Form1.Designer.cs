@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             checkBox1 = new CheckBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            groupBox1 = new GroupBox();
             SuspendLayout();
             // 
             // button1
@@ -52,11 +55,28 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            contextMenuStrip1.Opening += this.contextMenuStrip1_Opening;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Location = new Point(285, 97);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(200, 100);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox1);
             Controls.Add(checkBox1);
             Controls.Add(button1);
             Name = "Form1";
@@ -69,5 +89,7 @@
 
         private Button button1;
         private CheckBox checkBox1;
+        private ContextMenuStrip contextMenuStrip1;
+        private GroupBox groupBox1;
     }
 }
